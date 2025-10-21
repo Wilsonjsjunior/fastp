@@ -66,7 +66,7 @@ void UmiProcessor::addUmiToName(Read* r, string umi){
     if(mOptions->umi.prefix.empty())
         tag = delimiter + umi;
     else
-        tag = delimiter ":::::::" + mOptions->umi.prefix + "+" + umi;
+        tag = delimiter + ":::::::" + mOptions->umi.prefix + "+" + umi;
     int spacePos = -1;
     for(int i=0; i<r->mName->length(); i++) {
         if(r->mName->at(i) == ' ') {
