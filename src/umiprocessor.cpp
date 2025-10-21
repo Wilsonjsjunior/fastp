@@ -28,7 +28,7 @@ void UmiProcessor::process(Read* r1, Read* r2) {
     else if(mOptions->umi.location == UMI_LOC_PER_INDEX){
         string umiMerged = r1->firstIndex();
         if(r2) {
-            umiMerged = umiMerged + "+" + r2->lastIndex();
+            umiMerged = ":::::::" + umiMerged + "+" + r2->lastIndex();
         }
 
         addUmiToName(r1, umiMerged);
